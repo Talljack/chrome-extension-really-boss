@@ -1,9 +1,12 @@
 {
-  "name": "chrome-extension-vite-starter",
+  "name": "chrome-extension-really-boss",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@7.30.3",
+  "packageManager": "pnpm@9.0.6",
+  "author": "talljack <yugang.cao12@gmail.com> (https://github.com/talljack)",
+  "funding": "https://github.com/sponsors/talljack",
+  "homepage": "https://github.com/talljack/chrome-extension-really-boss",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -17,49 +20,40 @@
     "postinstall": "simple-git-hooks"
   },
   "dependencies": {
-    "i18next": "^22.4.13",
-    "i18next-browser-languagedetector": "^7.0.1",
+    "i18next": "^23.11.2",
+    "i18next-browser-languagedetector": "^7.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-i18next": "^12.2.0",
-    "webextension-polyfill": "^0.10.0"
+    "react-i18next": "^14.1.1",
+    "webextension-polyfill": "^0.11.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.37.0",
-    "@crxjs/vite-plugin": "^2.0.0-beta.15",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "@types/webextension-polyfill": "^0.10.0",
-    "@typescript-eslint/eslint-plugin": "^5.52.0",
-    "@typescript-eslint/parser": "^5.52.0",
-    "@vitejs/plugin-react": "^3.1.0",
-    "@vitest/coverage-c8": "^0.29.7",
-    "autoprefixer": "^10.4.13",
-    "eslint": "^8.36.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "lint-staged": "^13.2.0",
-    "postcss": "^8.4.31",
-    "prettier": "^2.8.7",
-    "sass": "^1.60.0",
-    "simple-git-hooks": "^2.8.1",
-    "typescript": "^4.9.5",
-    "vite": "^4.5.2",
-    "vite-tsconfig-paths": "^4.0.7",
-    "vitest": "^0.29.7"
+    "@crxjs/vite-plugin": "2.0.0-beta.23",
+    "@types/chrome": "^0.0.266",
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
+    "@types/webextension-polyfill": "^0.10.7",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/coverage-v8": "^1.5.1",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^9.1.1",
+    "lint-staged": "^15.2.2",
+    "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
+    "sass": "^1.75.0",
+    "simple-git-hooks": "^2.11.1",
+    "talljack-eslint-config": "^0.2.4",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10",
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "^1.5.0"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "prettier --write --cache --ignore-unknown",
-      "eslint --cache --fix"
-    ],
-    "*.{css,scss,less,md,html,json}": [
-      "prettier --write --cache --ignore-unknown"
-    ]
+    "*": "eslint . --fix"
   }
 }

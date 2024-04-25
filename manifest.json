@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "__MSG_extensionName__",
+  "name": "really-boss",
   "version": "0.1.0",
-  "description": "__MSG_extensionDescription__",
+  "description": "It's help you filter headhunter when you use boss to find jobs",
   "default_locale": "en",
   "options_ui": {
     "page": "pages/options.html"
@@ -17,13 +17,12 @@
     "service_worker": "src/background/background.ts",
     "type": "module"
   },
-  "permissions": ["storage", "tabs"],
-  "content-scripts": [
+  "permissions": ["storage", "tabs", "activeTab"],
+  "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["src/content-script/content-script.ts"],
-      "run_at": "document_idle"
+      "matches": ["*://*.zhipin.com/*"],
+      "js": ["src/content-script/content-script.ts"]
     }
   ],
-  "host_permissions": ["<all_urls>"]
+  "host_permissions": ["*://*.zhipin.com/*"]
 }

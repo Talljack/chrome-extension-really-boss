@@ -10,6 +10,9 @@ import manifest from './manifest.json'
 export default defineConfig({
   // @ts-expect-error @typescript-eslint/ban-ts-comment
   plugins: [react(), viteTsConfig(), crx({ manifest })],
+  server: {
+    port: 3000,
+  },
   build: {
     rollupOptions: {
       // default is multiple entry
