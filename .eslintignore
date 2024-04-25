@@ -1,5 +1,0 @@
-dist
-.eslintCache
-*.log
-node_modules
-.vscode/*

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Options: React.FC = () => {
-  const [count, setCount] = useState(0)
+  const [count] = useState(0)
 
   return (
     <div className="options-root">

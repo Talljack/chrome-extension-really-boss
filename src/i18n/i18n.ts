@@ -6,14 +6,14 @@ const resources = {
   en: {
     translation: {
       'Shortcut to open this Chrome Extension options page': 'Shortcut to open this Chrome Extension options page',
-      Settings: 'Settings',
+      'Settings': 'Settings',
       'Change shortcut': 'Change shortcut',
     },
   },
   zh: {
     translation: {
       'Shortcut to open this Chrome Extension options page': '打开 Chrome Extension 的 options 页面的快捷键',
-      Settings: '设置',
+      'Settings': '设置',
       'Change shortcut': '修改快捷键',
     },
   },
